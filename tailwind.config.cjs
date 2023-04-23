@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         background: '#D6F9FB',
         content:'#1C2833'
+      },
+      blur: {
+        xs: '2px',
       }
     },
   },
