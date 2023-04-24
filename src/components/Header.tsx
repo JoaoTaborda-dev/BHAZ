@@ -1,39 +1,27 @@
-import { Plus, X } from 'phosphor-react'
-import * as Dialog from '@radix-ui/react-dialog';
-import { useState } from 'react';
-import logoImage from '../assets/logo.svg'
-import { NewHabitForm } from "./NewHabitForm";
+import { List, MagnifyingGlass, HeartStraight, UserGear, CaretCircleLeft, CaretCircleRight, SelectionBackground } from 'phosphor-react';
 
 export function Header() {
 
   return (
-    <div className='w-full max-w-3xl mx-auto flex items-center justify-between'>
-      <img src={logoImage} alt="Habits" />
+    <div className="w-full flex space-x-2">
+      <div className='w-11/12 h-14 border-2 border-zinc-800 bg-teal-800 opacity-30 rounded-b-xl flex items-center space-x-3'>
+        <button className='mx-2'>
+          <List size={32} color="#fff0f0" weight="bold" />
+        </button>
+        <h1 className='w-3.5 opacity-70 font-extrabold text-3xl'>BHAZ</h1>
 
-      <Dialog.Root>
-        <Dialog.Trigger
-          type='button'
-          className='border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300'
-        >
-          <Plus size={20} className="text-violet-500" />
-          Novo Hábito
-        </Dialog.Trigger>
-
-        <Dialog.Portal>
-          <Dialog.Overlay className='w-screen h-screen bg-black/80 fixed inset-0' />
-          <Dialog.Content className='absolute p-10 bg-zinc-900 rounded-2xl w-full max-w-md top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-            <Dialog.Close className='absolute right-6 top-6 text-zinc-400 hover:text-zinc-200'>
-              <X size={24} aria-label="Fechar" />
-            </Dialog.Close>
-            <Dialog.Title className='text-3xl leading-tight font-extrabold'>
-              Criar Hábito
-            </Dialog.Title>
-            <NewHabitForm />
-          </Dialog.Content>
-        </Dialog.Portal>
-      </Dialog.Root>
-
-
+      </div>
+      <div className='w-1/12 h-14 border-2 border-zinc-800 bg-teal-800 opacity-30 rounded-b-xl flex items-center justify-between p-3'>
+        <button className=''>
+          <MagnifyingGlass size={30} color="#fff0f0" />
+        </button>
+        <button>
+          <HeartStraight size={30} color="#fff0f0" />
+        </button>
+        <button>
+          <UserGear size={30} color="#fff0f0" />
+        </button>
+      </div>
     </div>
   )
 }
