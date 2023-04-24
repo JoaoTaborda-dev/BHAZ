@@ -1,4 +1,4 @@
-import { List, MagnifyingGlass, HeartStraight, UserGear, CaretCircleLeft, CaretCircleRight, SelectionBackground } from 'phosphor-react';
+import { List, MagnifyingGlass, HeartStraight, UserGear } from 'phosphor-react';
 
 export function Header() {
 
